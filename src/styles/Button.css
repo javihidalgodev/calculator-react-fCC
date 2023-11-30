@@ -1,11 +1,14 @@
 .button {
-  padding: 10px;
-  min-width: 50px;
-  min-height: 50px;
+  /* padding: 10px; */
+  min-width: 75px;
+  min-height: 75px;
   text-align: center;
+  color: var(--text-color);
+  background-color: var(--bg-calculator-variant);
+  border: none;
   user-select: none;
-  border: 2px solid var(--bg-calculator-variant);
 
+  font-size: 1.5rem;
 }
 
 .operator {
@@ -15,10 +18,6 @@
 #clear {
   width: 100%;
   background-color: crimson;
-}
-
-#equals {
-  background-color: var(--bg-calculator-variant);
 }
 
 #zero {

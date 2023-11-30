@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { evaluate } from 'mathjs'
+import Logo from './components/Logo'
 import Button from './components/Button'
 import Display from './components/Display'
 import Clear from './components/Clear'
@@ -91,42 +92,49 @@ function App() {
   }
 
   return (
-    <div id='calculator'>
-      <Display input={input} operation={operation} />
-      <div id="board">
-        <table>
-          <tbody>
-          <tr>
-            <Clear id='clear' colSpan='2' handleClick={handleClear}>AC</Clear>
-            <Button id='divide' handleClick={add}>/</Button>
-            <Button id='multiply' handleClick={add}>*</Button>
-          </tr>
-          <tr>
-            <Button id='seven' handleClick={add}>7</Button>
-            <Button id='eight' handleClick={add}>8</Button>
-            <Button id='nine' handleClick={add}>9</Button>
-            <Button id='subtract' handleClick={add}>-</Button>
-          </tr>
-          <tr>
-            <Button id='four' handleClick={add}>4</Button>
-            <Button id='five' handleClick={add}>5</Button>
-            <Button id='six' handleClick={add}>6</Button>
-            <Button id='add' handleClick={add}>+</Button>
-          </tr>
-          <tr>
-            <Button id='one' handleClick={add}>1</Button>
-            <Button id='two' handleClick={add}>2</Button>
-            <Button id='three' handleClick={add}>3</Button>
-            <Button id='equals' rowSpan='2' handleClick={calcRes}>=</Button>
-          </tr>
-          <tr>
-            <Button id='zero' colSpan='2' handleClick={add}>0</Button>
-            <Button id='decimal' handleClick={add}>.</Button>
-          </tr>
-          </tbody>
-        </table>
+    <>
+      <Logo />
+      <div id='calculator'>
+        <div id="board">
+          <table>
+            <tbody>
+            <tr>
+              <td colSpan='4'>
+                <Display input={input} operation={operation} />
+              </td>
+            </tr>
+            <tr>
+              <Clear id='clear' colSpan='2' handleClick={handleClear}>AC</Clear>
+              <Button id='divide' handleClick={add}>/</Button>
+              <Button id='multiply' handleClick={add}>*</Button>
+            </tr>
+            <tr>
+              <Button id='seven' handleClick={add}>7</Button>
+              <Button id='eight' handleClick={add}>8</Button>
+              <Button id='nine' handleClick={add}>9</Button>
+              <Button id='subtract' handleClick={add}>-</Button>
+            </tr>
+            <tr>
+              <Button id='four' handleClick={add}>4</Button>
+              <Button id='five' handleClick={add}>5</Button>
+              <Button id='six' handleClick={add}>6</Button>
+              <Button id='add' handleClick={add}>+</Button>
+            </tr>
+            <tr>
+              <Button id='one' handleClick={add}>1</Button>
+              <Button id='two' handleClick={add}>2</Button>
+              <Button id='three' handleClick={add}>3</Button>
+              <Button id='equals' rowSpan='2' handleClick={calcRes}>=</Button>
+            </tr>
+            <tr>
+              <Button id='zero' colSpan='2' handleClick={add}>0</Button>
+              <Button id='decimal' handleClick={add}>.</Button>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
