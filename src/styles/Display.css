@@ -1,0 +1,14 @@
+.display {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border: 2px solid var(--bg-calculator-variant);
+}
+
+#operation {
+  font-size: .8rem;
+  color: var(--bg-calculator-variant);
+}

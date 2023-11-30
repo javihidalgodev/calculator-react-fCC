@@ -1,0 +1,26 @@
+.button {
+  padding: 10px;
+  min-width: 50px;
+  min-height: 50px;
+  text-align: center;
+  user-select: none;
+  border: 2px solid var(--bg-calculator-variant);
+
+}
+
+.operator {
+  background-color: var(--bg-operator);
+}
+
+#clear {
+  width: 100%;
+  background-color: crimson;
+}
+
+#equals {
+  background-color: var(--bg-calculator-variant);
+}
+
+#zero {
+  width: 100%;
+}
